@@ -37,9 +37,11 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: ./java-ci-cd-project
 
       - name: Run tests with Maven
         run: mvn test
+        working-directory: ./java-ci-cd-project
 
       - name: Deploy to server (optional)
         run: |
